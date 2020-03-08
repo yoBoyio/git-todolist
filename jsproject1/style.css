@@ -77,7 +77,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background-color: #5b0085;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -104,6 +104,7 @@ input {
 #date{
   display: flex;
   margin-top:10px;
+
 }
 
 @media(min-width:946px){
@@ -132,7 +133,7 @@ input {
 
 .btnchange{
   float: left;
-  width:100px;
-  height: 40px;
-  
+  width:50px;
+  height: 30px;
+  margin: 0px 0px 30px ;
 }
