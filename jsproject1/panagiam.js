@@ -65,3 +65,10 @@ function newElement() {
     }
   }
 } 
+
+// onclick change color
+var btn = document.createElement("button");
+var div=document.getElementById("myDIV");
+btn.classList.add("btnchange");
+btn.innerHTML="pata";
+div.prepend(btn)
