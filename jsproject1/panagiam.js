@@ -73,10 +73,10 @@ btn.classList.add("btnchange");
 btn.innerHTML="Color";
 div.prepend(btn);*/
 var i=0;
-var color=["#AB274F","#FAEBD7","00FFFF","#B2BEB5","#BFFF00"];
+var colors=["#AB274F","#FAEBD7","00FFFF","#B2BEB5","#BFFF00"];
 
-  document.querySelector("btnchange").addEventListener("click",function(){
-    i=i<color.length ? ++i :0;
-    document.querySelector("myDIV").style.background= color[i];
+  document.querySelector(".btnchange").addEventListener("click",function(){
+    i=i<colors.length ? ++i :0;
+    document.querySelector("#myDIV").style.background= colors[i];
   })
 
