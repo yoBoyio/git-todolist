@@ -140,7 +140,6 @@ span{
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
-
 }
 /*.btnchange{
   border: none;
@@ -148,6 +147,9 @@ span{
   width:50px;
   height: 30px;
   margin: 0px 0px 30px ;
-  text-align: center;
-  
+  text-align: center;  
 }*/
+/* image upload*/
+#myImg{
+  display: flex;
+}

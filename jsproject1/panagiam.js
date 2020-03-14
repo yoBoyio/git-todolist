@@ -17,9 +17,26 @@ for (i = 0; i < close.length; i++) {
     div.style.display = "none";
   }
 }
+//upload image
+
+document.getElementById('myImg').style.opacity = 0;
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');  // $('img')[0]
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+    
+      }
+  });
+});
+
+function imageIsLoaded() { 
+  alert(this.src);  // blob url
+}
+
 
 // Add a "checked" symbol when clicking on a list item
-console.log("skrskr");
 var list = document.getElementById('myUL');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -38,14 +55,19 @@ function newElement() {
 
   let datespan=document.createElement('span');
   datespan.appendChild(dateText);
-  li.appendChild
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   span.appendChild(t);
-  
+
+ 
   if (inputValue === '') {
     alert("You must write something!");
   } else {
+      var foto=document.getElementById("myImg");
+       if(foto.src!= "#"){
+         li.appendChild(foto);
+         document.getElementById('myImg').style.opacity = 1;
+       }
     li.appendChild(span);
     li.appendChild(datespan);
     document.getElementById("myUL").appendChild(li);
@@ -72,6 +94,8 @@ var div=document.getElementById("myDIV");
 btn.classList.add("btnchange");
 btn.innerHTML="Color";
 div.prepend(btn);*/
+
+//color button change header background
 var i=0;
 var colors=["#AB274F","#FAEBD7","00FFFF","#B2BEB5","#BFFF00"];
 
@@ -79,4 +103,6 @@ var colors=["#AB274F","#FAEBD7","00FFFF","#B2BEB5","#BFFF00"];
     i=i<colors.length ? ++i :0;
     document.querySelector("#myDIV").style.background= colors[i];
   })
+  
+
 
